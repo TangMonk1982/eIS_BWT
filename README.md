@@ -1,7 +1,7 @@
 # eIS_BWT
-An algorithm to build a suffix array and BWT using the external induced sorting method.
 ====================================================================================
 
+An algorithm to build a suffix array and BWT using the external induced sorting method.
 
 Description
 -----------

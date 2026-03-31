@@ -1,4 +1,4 @@
-An algorithm to build suffix array and BWT by the external induced sorting method.
+An algorithm to build a suffix array and BWT using the external induced sorting method.
 ====================================================================================
 
 
@@ -15,15 +15,15 @@ The 'icpc' compiler within Intel oneAPI is required, with no other external depe
 
 Compilation and usage
 ---------------------
-Type 'make' to build the executable file called 'build_bwt' to build suffix array and/or BWT. The output suffix array and BWT will be written to sample.txt.sa5 and sample.txt.bwt, and each element of suffix array and BWT is encoded by 5 and 1 byte, respectively. By default, the algorithm uses 24 GiB of RAM, 2 MiB I/O buffer, and 200 MiB file blocks.
+Type 'make' to build the executable file called 'build_bwt' to build the suffix array and/or BWT. The output suffix array and BWT will be written to sample.txt.sa5 and sample.txt.bwt, and each element of suffix array and BWT is encoded by 5 and 1 byte, respectively. By default, the algorithm uses 24 GiB of RAM, 2 MiB I/O buffer, and 200 MiB file blocks.
 
 There are three cases to build SA or BWT as follows:
 
-1. To build BWT only, run the command of './build_bwt sample.txt -bwt';
+1. To build BWT only, run the command './build_bwt sample.txt -bwt';
 
-2. To build SA only, run the command of './build_bwt sample.txt -sa';
+2. To build SA only, run the command './build_bwt sample.txt -sa';
 
-3. To build BWT and SA, run the command of './build_bwt sample.txt -bwtsa';
+3. To build BWT and SA, run the command './build_bwt sample.txt -bwtsa';
 
 
 

@@ -1,0 +1,49 @@
+An algorithm to build suffix array and BWT by the external induced sorting method.
+====================================================================================
+
+
+Description
+-----------
+
+This package implements suffix array and BWT construction algorithms for massive datasets using the external induced sorting method. It is mainly used to verify these algorithms and evaluate their performance.
+
+
+Requirements
+------------
+The 'icpc' compiler within Intel oneAPI is required, with no other external dependencies.
+
+
+Compilation and usage
+---------------------
+Type 'make' to build the executable file called 'build_bwt' to build suffix array and/or BWT. The output suffix array and BWT will be written to sample.txt.sa5 and sample.txt.bwt, and each element of suffix array and BWT is encoded by 5 and 1 byte, respectively. By default, the algorithm uses 24 GiB of RAM, 2 MiB I/O buffer, and 200 MiB file blocks.
+
+There are three cases to build SA or BWT as follows:
+
+1. To build BWT only, run the command of './build_bwt sample.txt -bwt';
+
+2. To build SA only, run the command of './build_bwt sample.txt -sa';
+
+3. To build BWT and SA, run the command of './build_bwt sample.txt -bwtsa';
+
+
+
+Limitations
+------------
+- The current implementation version uses 24 GiB of RAM by default.
+- The input can not contain the character 0. If it contains the character of 0, compile './tool/format.cpp' to generate a format tool named 'format', execute the command './format sample.txt' to produce the formated file 'sample.txt.format', and finally execute the command './build_sa_bwt sample.txt.format' to build its suffix array and BWT.
+
+
+Troubleshooting
+---------------
+
+- If the program throws the error '_file is nullptr' and pauses, the limit of the maximum number of files opened by a program is broken. A solution is to use the "ulimit -n newlimit" command to increase this file limit. For example, increase this maximum number with 'ulimit -n 102400' command.
+
+- If there are some temporary files in the input directory named 'tmp_file_*', please delete them directly.
+
+
+Tools
+--------------
+- './tool/skyline.cpp' is a tool to generate the dataset of skyline.
+- './tool/format.cpp' is to format the alphabet of an input with non-zero characters.
+
+

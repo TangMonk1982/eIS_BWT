@@ -110,7 +110,7 @@ int main(int argc, char** argv)
 
         FILE * fp = fopen(sa_name.c_str(),"wb");
 
-        uint64 buf_size = 128 * K_1024 * sizeof(uint40);
+        uint64 buf_size = 128 * K_1024;
 
         uint40 * sa_buf = new uint40[ buf_size ];
 
@@ -159,14 +159,14 @@ int main(int argc, char** argv)
             sa_reverse = nullptr;
         }
 
-        delete sa_buf;
+        delete[] sa_buf;
         sa_buf = nullptr;
 
 
     }
     else
     {
-        std::cout << "â€˜sa_reverseâ€? is nullptr, and it is right.\n";
+        std::cout << "sa_reverse is nullptr, and it is right." << std::endl;
     }
 
     Timer::prog_end_time = Timer::get_wall_time();

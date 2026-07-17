@@ -5936,7 +5936,7 @@ void DSAComputation<alphabet_type, offset_type, compress_type, relative_offset_t
 
             fp = fopen(sa_name.c_str(),"wb");
 
-            buf_size = 20 * K_1024 * sizeof(uint40);
+            buf_size = 20 * K_1024;
 
             sa_buf = new uint40[ buf_size ];
 

@@ -121,6 +121,11 @@ SAComputation<alphabet_type, offset_type>::SAComputation(alphabet_type * _s, con
 
 	offset_type i, j, offset_zero(0), offset_one(1);
 
+	if (_sLen < 2) {
+   		std::cout << "_sLen is less than 2." << std::endl;
+		std::cin.get();
+	}
+
 	char * t_buf = new char[_sLen / 8 + 1]; BitWrapper t(t_buf);
 
 	//compute t

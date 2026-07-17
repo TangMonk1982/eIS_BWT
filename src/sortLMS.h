@@ -396,7 +396,8 @@ public:
         /*for(int j = 0; j < m_alpha_blocks_number; j++){
 
             std::cout << j << " : " << m_alpha_blocks_info[j].m_beg_alpha << "," << m_alpha_blocks_info[j].m_end_alpha << std::endl;
-        }*/
+        }
+*/
 
         std::cout << " m_lms_seqs size in LMSHeapSorter_1 in sortLMS.h :" << pair_vector.size() << std::endl;
 
@@ -658,7 +659,7 @@ public:
 
         }
 
-        delete p_buf;
+        delete[] p_buf;
 
         bkt_vector[bkt_id]->start_read();
 

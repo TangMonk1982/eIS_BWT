@@ -79,7 +79,7 @@ int main(int argc, char** argv)
     }
 
 
-    MyVector<uint40> * sa_reverse;
+    MyVector<uint40> * sa_reverse = nullptr;
 
     /// byte-alphabet
     uint8 alpha = 255;

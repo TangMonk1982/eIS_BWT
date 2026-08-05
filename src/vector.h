@@ -1028,8 +1028,8 @@ private:
         ~MyBuf()
         {
 
-            delete m_data[0];
-            delete m_data[1];
+            delete [] m_data[0]; // 20260805
+            delete [] m_data[1]; // 20260805
 
             m_data[0] = nullptr;
             m_data[1] = nullptr;

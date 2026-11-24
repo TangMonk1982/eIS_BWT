@@ -121,7 +121,7 @@ SAComputation<alphabet_type, offset_type>::SAComputation(alphabet_type * _s, con
 
 	offset_type i, j, offset_zero(0), offset_one(1);
 
-	if (_sLen < 2) {
+	if (_sLen < (offset_type)2) {
    		std::cout << "_sLen is less than 2." << std::endl;
 		std::cin.get();
 	}
